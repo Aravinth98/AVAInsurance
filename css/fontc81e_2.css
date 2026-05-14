@@ -1,0 +1,22 @@
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/regular_2.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/regulard41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/regular_2.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/regular_2.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/regular_2.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/bold_2.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/boldd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/bold_2.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/bold_2.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/bold_2.ttf') format('truetype'); /* Safari, Android, iOS */
+}

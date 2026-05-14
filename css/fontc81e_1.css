@@ -1,0 +1,66 @@
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/light_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/lightd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/light_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/light_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/light_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url('../assets/fonts/lightitalic_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/lightitalicd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/lightitalic_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/lightitalic_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/lightitalic_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/regular_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/regulard41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/regular_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/regular_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/regular_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../assets/fonts/italic_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/italicd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/italic_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/italic_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/italic_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/bold_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/boldd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/bold_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/bold_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/bold_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../assets/fonts/bolditalic_1.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/bolditalicd41d.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/bolditalic_1.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/bolditalic_1.woff') format('woff'), /* Modern Browsers */
+       url('../assets/fonts/bolditalic_1.ttf') format('truetype'); /* Safari, Android, iOS */
+}

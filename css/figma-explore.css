@@ -1,0 +1,273 @@
+/* High-Fidelity Explore Car Insurance Styles */
+.innerpage-v2, .innerpage-v2 * {
+    font-family: 'Urbanist', "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* ============================================================
+   Section: Explore Hero Banner (FIGMA)
+   ============================================================ */
+
+.innerpage-v2 .explore-hero {
+    background: linear-gradient(251.82deg, #249E5E 8.3%, #10305E 91.7%) !important;
+    height: 402px !important;
+    color: #ffffff !important;
+    font-family: 'Urbanist', sans-serif !important;
+    overflow: hidden !important;
+    position: relative !important;
+    padding: 0 !important; /* Managed by inner content positioning */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.innerpage-v2 .explore-hero-inner {
+    width: 1280px !important;
+    max-width: 100% !important;
+    height: 242px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.innerpage-v2 .explore-hero-content {
+    flex: 1 !important;
+    z-index: 2 !important;
+    padding-left: 20px !important; /* Alignment within 1280px */
+}
+
+.innerpage-v2 .explore-hero-tag {
+    display: block !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    color: #249E5E !important; /* Matches gradient */
+    margin-bottom: 20px !important;
+    text-transform: uppercase !important;
+    background: rgba(255, 255, 255, 1);
+    padding: 4px 8px;
+    display: inline-block !important;
+    border-radius: 4px;
+}
+
+.innerpage-v2 .explore-hero-title {
+    font-size: 56px !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    margin: 0 0 20px 0 !important;
+    color: #ffffff !important;
+}
+
+.innerpage-v2 .explore-hero-desc {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    max-width: 500px !important;
+    margin: 0 !important;
+}
+
+.innerpage-v2 .explore-hero-image {
+    position: absolute !important;
+    width: 692px !important;
+    height: 219px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    left: 564.5px !important;
+    z-index: 1 !important;
+}
+
+/* Background Highlight Vector */
+.innerpage-v2 .explore-hero-image::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 482.73748779296875px !important;
+    height: 482.73748779296875px !important;
+    background: #FFFFFF !important;
+    opacity: 0.15 !important; /* Kept subtle to match visual design provided in context */
+    top: -40.23px !important;
+    left: 114.7px !important;
+    z-index: -1 !important;
+    border-radius: 50% !important;
+    pointer-events: none !important;
+}
+
+.innerpage-v2 .car-img {
+    width: 692px !important;
+    height: 219px !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2)) !important;
+}
+
+/* Responsiveness */
+@media (max-width: 1400px) {
+    .innerpage-v2 .explore-hero-title {
+        font-size: 60px !important;
+    }
+
+    .innerpage-v2 .car-img {
+        max-width: 140% !important;
+        transform: translateX(5%) !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .innerpage-v2 .explore-hero-title {
+        font-size: 52px !important;
+    }
+
+    .innerpage-v2 .explore-hero-inner {
+        gap: 40px !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .innerpage-v2 .explore-hero {
+        padding: 100px 0 !important;
+    }
+
+    .innerpage-v2 .explore-hero-inner {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .innerpage-v2 .explore-hero-desc {
+        margin: 0 auto !important;
+    }
+
+    .innerpage-v2 .explore-hero-image {
+        justify-content: center !important;
+        margin-top: 60px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .innerpage-v2 .car-img {
+        max-width: 90% !important;
+        transform: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .innerpage-v2 .explore-hero {
+        padding: 80px 0 !important;
+    }
+
+    .innerpage-v2 .explore-hero-title {
+        font-size: 44px !important;
+    }
+
+    .innerpage-v2 .explore-hero-desc {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .innerpage-v2 .explore-hero-title {
+        font-size: 36px !important;
+    }
+}
+
+/* ============================================================
+   Section: Explore Tabs Navigation
+   ============================================================ */
+
+.innerpage-v2 .explore-tabs-section {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    padding: 0 !important;
+    font-family: 'Urbanist', sans-serif !important;
+}
+
+.innerpage-v2 .explore-tabs {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 60px !important;
+    /* Increased for airy figma-like spacing */
+    flex-wrap: nowrap !important;
+}
+
+.innerpage-v2 .tab-item {
+    background: none !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 30px 5px !important;
+    /* Slightly taller vertical rhythm */
+    cursor: pointer !important;
+    color: #718096 !important;
+    /* Designer grey */
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+}
+
+.innerpage-v2 .tab-item::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -1px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #27A360 !important;
+    transform: scaleX(0) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.innerpage-v2 .tab-item.active {
+    color: #27A360 !important;
+    /* Brand Green */
+    font-weight: 700 !important;
+}
+
+.innerpage-v2 .tab-item.active::after {
+    transform: scaleX(1) !important;
+}
+
+.innerpage-v2 .tab-icon {
+    width: 22px !important;
+    height: 22px !important;
+    stroke: currentColor !important;
+    stroke-width: 1.5px !important;
+    /* Thinner line icons as per design */
+    transition: stroke 0.3s ease !important;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .innerpage-v2 .explore-tabs {
+        gap: 40px !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    .innerpage-v2 .explore-tabs {
+        gap: 25px !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        padding: 0 30px !important;
+    }
+
+    .innerpage-v2 .explore-tabs::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .innerpage-v2 .explore-tabs {
+        -ms-overflow-style: none !important;
+        scrollbar-width: none !important;
+    }
+
+    .innerpage-v2 .tab-item {
+        padding: 20px 5px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .innerpage-v2 .tab-item {
+        font-size: 14px !important;
+    }
+}

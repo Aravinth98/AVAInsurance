@@ -1,0 +1,132 @@
+.quote-section-container {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+    background: #fff;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+.quote-section-container .section-container {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Left Column */
+.quote-section-container .left-side {
+    width: 200px;
+    padding-right: 30px;
+    flex-shrink: 0;
+}
+.quote-section-container .logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+.quote-section-container .address {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444;
+}
+.quote-section-container .phone-link {
+    color: #3b87cf;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+/* Right Column / Form Area */
+.quote-section-container .right-side {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+.quote-section-container .intro {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #444;
+    text-align: center;
+}
+.quote-section-container .input-wrap {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+.quote-section-container .quote-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    color: #555;
+}
+.quote-section-container .quote-input:focus {
+    outline: none;
+    border-color: #a8d6ff;
+    box-shadow: 0 0 8px rgba(168, 214, 255, 0.6);
+}
+.quote-section-container .btn-start {
+    background-color: #d8dde1;
+    color: #fff;
+    padding: 12px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 200;
+}
+.quote-section-container .btn-start:hover {
+    background-color: #cbd2d6;
+}
+
+/* Bottom Assets */
+.quote-section-container .bottom-area {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote-section-container .disclaimer-text {
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 780px;
+    margin-bottom: 20px;
+}
+.quote-section-container .digicert-img {
+    width: 110px;
+    cursor: pointer;
+}
+
+/* Success Message */
+.quote-section-container #success-view {
+    display: none;
+    text-align: center;
+    padding: 80px 0;
+    width: 100%;
+}
+.quote-section-container #success-view h2 { color: #2ecc71; margin-bottom: 10px; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .quote-section-container .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quote-section-container .left-side {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .quote-section-container .logo {
+        margin: 0 auto 20px;
+    }
+}
