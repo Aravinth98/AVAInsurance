@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign Up</title>
+  <title>Contact Form</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,7 +19,7 @@
     }
 
     .form-wrap {
-      max-width: 480px;
+      max-width: 460px;
       width: 100%;
       background: #fff;
       border: 1px solid #e5e4ed;
@@ -28,30 +28,11 @@
       box-shadow: 0 4px 24px rgba(83,71,183,0.07);
     }
 
-    .form-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 1.75rem;
-    }
+    .form-header { margin-bottom: 1.75rem; }
+    .form-title { font-size: 22px; font-weight: 600; color: #18171f; }
+    .form-sub { font-size: 14px; color: #7b7a8e; margin-top: 4px; }
 
-    .form-logo-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: #5347B7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .form-logo-icon i { color: #fff; font-size: 22px; }
-
-    .form-title { font-size: 20px; font-weight: 600; color: #18171f; margin: 0; }
-    .form-sub { font-size: 13px; color: #7b7a8e; margin: 2px 0 0; }
-
-    .field { margin-bottom: 1rem; }
+    .field { margin-bottom: 1.1rem; }
 
     .field label {
       display: block;
@@ -61,65 +42,43 @@
       margin-bottom: 5px;
     }
 
-    .field input,
-    .field select {
-      width: 100%;
-      padding: 9px 12px;
-      font-size: 14px;
-      border: 1px solid #dddce8;
-      border-radius: 8px;
-      outline: none;
-      color: #18171f;
-      background: #fff;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-
-    .field input:focus {
-      border-color: #5347B7;
-      box-shadow: 0 0 0 3px rgba(83,71,183,0.12);
-    }
-
-    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
     .input-icon { position: relative; }
     .input-icon i {
       position: absolute;
-      left: 10px;
+      left: 11px;
       top: 50%;
       transform: translateY(-50%);
       font-size: 16px;
       color: #a8a7bb;
       pointer-events: none;
     }
-    .input-icon input { padding-left: 34px; }
+    .input-icon input { padding-left: 36px; }
 
-    .pw-wrap { position: relative; }
-    .pw-wrap input { padding-right: 38px; }
-    .pw-toggle {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      color: #a8a7bb;
-      font-size: 16px;
-      line-height: 1;
-    }
-    .pw-toggle:hover { color: #5347B7; }
-
-    .strength-bar { display: flex; gap: 4px; margin-top: 6px; }
-    .strength-bar span {
-      flex: 1;
-      height: 3px;
-      border-radius: 2px;
-      background: #e5e4ed;
-      transition: background 0.2s;
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #dddce8;
+      border-radius: 8px;
+      outline: none;
+      color: #18171f;
+      background: #fff;
+      font-family: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s;
     }
 
-    .strength-label { font-size: 11px; color: #a8a7bb; margin-top: 3px; }
+    .field input:focus,
+    .field textarea:focus {
+      border-color: #5347B7;
+      box-shadow: 0 0 0 3px rgba(83,71,183,0.12);
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
 
     .error-msg {
       font-size: 11px;
@@ -128,23 +87,11 @@
       display: none;
     }
 
-    .field.has-error input { border-color: #d94040; }
+    .field.has-error input,
+    .field.has-error textarea { border-color: #d94040; }
     .field.has-error .error-msg { display: block; }
 
-    .checkbox-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      margin-bottom: 1.25rem;
-    }
-
-    .checkbox-row input[type=checkbox] { margin-top: 2px; flex-shrink: 0; accent-color: #5347B7; }
-
-    .checkbox-row label { font-size: 13px; color: #5a5870; line-height: 1.5; }
-    .checkbox-row a { color: #5347B7; text-decoration: none; }
-    .checkbox-row a:hover { text-decoration: underline; }
-
-    .btn-primary {
+    .btn-submit {
       width: 100%;
       padding: 11px;
       background: #5347B7;
@@ -158,45 +105,11 @@
       align-items: center;
       justify-content: center;
       gap: 7px;
+      margin-top: 0.25rem;
       transition: background 0.15s, transform 0.1s;
     }
-    .btn-primary:hover { background: #4439a8; }
-    .btn-primary:active { transform: scale(0.98); }
-
-    .divider {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 1.25rem 0;
-    }
-    .divider hr { flex: 1; border: none; border-top: 1px solid #e5e4ed; }
-    .divider span { font-size: 12px; color: #a8a7bb; }
-
-    .btn-social {
-      width: 100%;
-      padding: 10px;
-      background: #f7f6fb;
-      border: 1px solid #e5e4ed;
-      border-radius: 8px;
-      font-size: 14px;
-      color: #18171f;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: background 0.15s;
-    }
-    .btn-social:hover { background: #eeecf7; }
-
-    .sign-in {
-      text-align: center;
-      margin-top: 1.25rem;
-      font-size: 13px;
-      color: #7b7a8e;
-    }
-    .sign-in a { color: #5347B7; text-decoration: none; font-weight: 500; }
-    .sign-in a:hover { text-decoration: underline; }
+    .btn-submit:hover { background: #4439a8; }
+    .btn-submit:active { transform: scale(0.98); }
 
     .success-banner {
       display: none;
@@ -210,11 +123,6 @@
       align-items: center;
       gap: 8px;
     }
-
-    @media (max-width: 480px) {
-      .row { grid-template-columns: 1fr; }
-      .form-wrap { padding: 1.5rem; }
-    }
   </style>
 </head>
 <body>
@@ -223,166 +131,81 @@
 
   <div class="success-banner" id="successBanner">
     <i class="ti ti-circle-check" style="font-size:18px"></i>
-    Account created successfully! Welcome aboard.
+    Message sent! We'll get back to you soon.
   </div>
 
-  <div class="form-logo">
-    <div class="form-logo-icon">
-      <i class="ti ti-bolt"></i>
-    </div>
-    <div>
-      <p class="form-title">Create your account</p>
-      <p class="form-sub">Get started — it's free</p>
-    </div>
+  <div class="form-header">
+    <h1 class="form-title">Get in touch</h1>
+    <p class="form-sub">Fill in the form below and we'll respond shortly.</p>
   </div>
 
-  <div class="row">
-    <div class="field" id="field-first">
-      <label for="firstName">First name</label>
-      <input type="text" id="firstName" placeholder="Jane" autocomplete="given-name" />
-      <p class="error-msg">First name is required.</p>
+  <div class="field" id="field-name">
+    <label for="name">Name</label>
+    <div class="input-icon">
+      <i class="ti ti-user"></i>
+      <input type="text" id="name" placeholder="Your full name" autocomplete="name" />
     </div>
-    <div class="field" id="field-last">
-      <label for="lastName">Last name</label>
-      <input type="text" id="lastName" placeholder="Doe" autocomplete="family-name" />
-      <p class="error-msg">Last name is required.</p>
-    </div>
+    <p class="error-msg">Please enter your name.</p>
   </div>
 
   <div class="field" id="field-email">
-    <label for="email">Email address</label>
+    <label for="email">Email</label>
     <div class="input-icon">
       <i class="ti ti-mail"></i>
-      <input type="email" id="email" placeholder="jane@example.com" autocomplete="email" />
+      <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
     </div>
     <p class="error-msg">Enter a valid email address.</p>
   </div>
 
-  <div class="field" id="field-username">
-    <label for="username">Username</label>
+  <div class="field" id="field-phone">
+    <label for="phone">Phone</label>
     <div class="input-icon">
-      <i class="ti ti-at"></i>
-      <input type="text" id="username" placeholder="janedoe" autocomplete="username" />
+      <i class="ti ti-phone"></i>
+      <input type="tel" id="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
     </div>
-    <p class="error-msg">Username must be at least 3 characters.</p>
+    <p class="error-msg">Enter a valid phone number.</p>
   </div>
 
-  <div class="field" id="field-password">
-    <label for="password">Password</label>
-    <div class="pw-wrap">
-      <input type="password" id="password" placeholder="Create a strong password" autocomplete="new-password" oninput="updateStrength(this.value)" />
-      <button class="pw-toggle" type="button" onclick="togglePw('password', this)" aria-label="Show password">
-        <i class="ti ti-eye"></i>
-      </button>
-    </div>
-    <div class="strength-bar">
-      <span id="s1"></span>
-      <span id="s2"></span>
-      <span id="s3"></span>
-      <span id="s4"></span>
-    </div>
-    <p class="strength-label" id="strengthLabel"></p>
-    <p class="error-msg">Password must be at least 8 characters.</p>
+  <div class="field" id="field-message">
+    <label for="message">Message</label>
+    <textarea id="message" placeholder="Write your message here…"></textarea>
+    <p class="error-msg">Please enter a message.</p>
   </div>
 
-  <div class="field" id="field-confirm">
-    <label for="confirm">Confirm password</label>
-    <div class="pw-wrap">
-      <input type="password" id="confirm" placeholder="Repeat your password" autocomplete="new-password" />
-      <button class="pw-toggle" type="button" onclick="togglePw('confirm', this)" aria-label="Show confirm password">
-        <i class="ti ti-eye"></i>
-      </button>
-    </div>
-    <p class="error-msg">Passwords do not match.</p>
-  </div>
-
-  <div class="checkbox-row">
-    <input type="checkbox" id="terms" />
-    <label for="terms">
-      I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-    </label>
-  </div>
-
-  <button class="btn-primary" onclick="handleSubmit()">
-    <i class="ti ti-user-plus"></i> Create account
+  <button class="btn-submit" onclick="handleSubmit()">
+    <i class="ti ti-send"></i> Submit
   </button>
-
-  <div class="divider">
-    <hr /><span>or sign up with</span><hr />
-  </div>
-
-  <button class="btn-social" onclick="this.textContent='Coming soon…'">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-    </svg>
-    Continue with Google
-  </button>
-
-  <p class="sign-in">Already have an account? <a href="#">Sign in</a></p>
 
 </div>
 
 <script>
-  function togglePw(id, btn) {
-    const inp = document.getElementById(id);
-    const showing = inp.type === 'text';
-    inp.type = showing ? 'password' : 'text';
-    btn.querySelector('i').className = showing ? 'ti ti-eye' : 'ti ti-eye-off';
-  }
-
-  function updateStrength(val) {
-    const bars = ['s1','s2','s3','s4'].map(id => document.getElementById(id));
-    const label = document.getElementById('strengthLabel');
-    let score = 0;
-    if (val.length >= 8) score++;
-    if (/[A-Z]/.test(val)) score++;
-    if (/[0-9]/.test(val)) score++;
-    if (/[^A-Za-z0-9]/.test(val)) score++;
-    const colors = ['', '#d94040', '#EF9F27', '#1D9E75', '#0F6E56'];
-    const labels = ['', 'Weak', 'Fair', 'Good', 'Strong'];
-    bars.forEach((b, i) => b.style.background = i < score ? colors[score] : '#e5e4ed');
-    label.textContent = val.length ? labels[score] : '';
-    label.style.color = colors[score];
-  }
-
-  function setError(fieldId) {
-    document.getElementById(fieldId).classList.add('has-error');
-  }
-
-  function clearError(fieldId) {
-    document.getElementById(fieldId).classList.remove('has-error');
-  }
+  function setError(id) { document.getElementById(id).classList.add('has-error'); }
+  function clearError(id) { document.getElementById(id).classList.remove('has-error'); }
 
   function handleSubmit() {
+    const ids = ['field-name', 'field-email', 'field-phone', 'field-message'];
+    ids.forEach(clearError);
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const phone   = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
     let valid = true;
-    ['field-first','field-last','field-email','field-username','field-password','field-confirm'].forEach(clearError);
 
-    const first    = document.getElementById('firstName').value.trim();
-    const last     = document.getElementById('lastName').value.trim();
-    const email    = document.getElementById('email').value.trim();
-    const username = document.getElementById('username').value.trim();
-    const pw       = document.getElementById('password').value;
-    const conf     = document.getElementById('confirm').value;
-    const terms    = document.getElementById('terms').checked;
-
-    if (!first)                                          { setError('field-first');    valid = false; }
-    if (!last)                                           { setError('field-last');     valid = false; }
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('field-email'); valid = false; }
-    if (username.length < 3)                             { setError('field-username'); valid = false; }
-    if (pw.length < 8)                                   { setError('field-password'); valid = false; }
-    if (pw !== conf)                                     { setError('field-confirm');  valid = false; }
-    if (!terms) {
-      alert('Please accept the Terms of Service to continue.');
-      valid = false;
-    }
+    if (!name)                                                    { setError('field-name');    valid = false; }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))     { setError('field-email');   valid = false; }
+    if (!phone || !/^[\d\s\+\-\(\)]{7,15}$/.test(phone))         { setError('field-phone');   valid = false; }
+    if (!message)                                                 { setError('field-message'); valid = false; }
 
     if (valid) {
       const banner = document.getElementById('successBanner');
       banner.style.display = 'flex';
       banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      document.getElementById('name').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('message').value = '';
     }
   }
 </script>
